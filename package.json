@@ -1,11 +1,11 @@
 {
   "name": "the-acme-tasks",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "nodemon server"
+    "start:dev": "nodemon server",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +15,14 @@
   },
   "dependencies": {
     "express": "^4.17.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcreys/joshs-tasks.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jcreys/joshs-tasks/issues"
+  },
+  "homepage": "https://github.com/jcreys/joshs-tasks#readme",
+  "description": ""
 }
