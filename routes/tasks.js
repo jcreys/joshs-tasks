@@ -13,6 +13,17 @@ app.get('/', async(req,res,next)=>{
         next(ex);
     }
 })
+
+app.delete('/:id', async(req,res,next)=>{
+    try {
+        const task = await Task.findByPk(req.params.id); //find task
+        await task.destroy();
+        res.sendStatus(204)
+    }
+    catch(ex) {
+        next(ex);
+    }
+})
 //need to remove /api/tasks because of router
 
 module.exports = app;
