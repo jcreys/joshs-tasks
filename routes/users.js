@@ -12,7 +12,7 @@ app.get('/', async(req,res,next)=>{
 app.post('/', async(req,res,next)=>{
     try{
         console.log(req.body);
-        res.status(201).send(await Task.create(req.body));
+        res.status(201).send(await User.create(req.body));
     }catch(ex){
         next(ex)
     }
