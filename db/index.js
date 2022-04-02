@@ -8,7 +8,8 @@ const Task = sequelize.define('task', {
 });
 const User = sequelize.define('user', {
     firstName: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
     }
 
 });

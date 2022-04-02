@@ -1,5 +1,5 @@
 const app = require('express').Router();
-const { User } = require('../db');
+const { User, Task } = require('../db');
 
 app.get('/', async(req,res,next)=>{
     try {
@@ -7,6 +7,14 @@ app.get('/', async(req,res,next)=>{
     }
     catch(ex) {
         next(ex);
+    }
+})
+app.post('/', async(req,res,next)=>{
+    try{
+        console.log(req.body);
+        res.status(201).send(await Task.create(req.body));
+    }catch(ex){
+        next(ex)
     }
 })
 
