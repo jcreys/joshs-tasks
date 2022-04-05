@@ -8,11 +8,9 @@ const Users = ({users, tasks})=>{
         <ul>
             {
                 users.map( user=> {
-                    const usersTasks = tasks.filter( task => task.userId === user.id);
-                    console.log(usersTasks.length);
                     return(
                         <li key={ user.id}>
-                            <Link to={`/users/${user.id}`}> { user.firstName }({usersTasks.length})</Link>
+                            <Link to={`/users/${user.id}`}> { user.firstName }(0)</Link>
                         </li>
                     );
                 })
