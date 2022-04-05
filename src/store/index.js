@@ -1,21 +1,11 @@
 console.log('store');
 //set up store
 import { createStore, combineReducers } from 'redux';
+import tasks from './tasks.reducer.js';
+import users from './users.reducer.js';
 
-const tasks = (state=[], action)=> {
-    if(action.type === 'SET_TASKS'){
-        return action.tasks;
-    }
-    // console.log(action.users);
-    return state;
-}
-const users = (state=[], action)=> {
-    if(action.type === 'SET_USERS'){
-        return action.users;
-    }
-    console.log(action.users);
-    return state;
-}
+
+
 
 
 const reducer = combineReducers({

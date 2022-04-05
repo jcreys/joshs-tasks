@@ -6,10 +6,11 @@ const Nav = ({users, tasks, usersWithoutTasks})=> {
 
     return(
         <nav>
+            <Link to='/'>Home</Link>
             <Link to='/tasks'>Tasks ({tasks.length})</Link>
             <Link to='/users'>Users({users.length})</Link>
             <Link to='/users/without-tasks'>Users Without Tasks ({ usersWithoutTasks.length})</Link>
-            <Link to='/'>Home</Link>
+
 
         </nav>
     );
