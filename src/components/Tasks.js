@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'; //users gets past in with connect
+
 //run quick filter to find tasks that have the user id for particular user
 const Tasks = ({users, tasks})=>{
     return(
@@ -10,6 +11,7 @@ const Tasks = ({users, tasks})=>{
                     return(
                         <li key={ task.id}> 
                             { task.name }
+                            <button>x</button>
                             <br />
                             ({user ? user.firstName : ''})
                         </li>
@@ -20,4 +22,12 @@ const Tasks = ({users, tasks})=>{
     );
 };
 
-export default connect(state => state)(Tasks); //need state for entire component
+const mapDispatchToProps = (dispatch) => {
+    return {
+        destroy: (id)=> {
+            console.log(id);
+        }
+
+    };
+}
+export default connect(state => state, mapDispatchToProps)(Tasks); //need state for entire component
