@@ -6,6 +6,9 @@ const tasks = (state=[], action)=> {
         const tasks = state.filter(task => task.id !== action.id);
         return tasks;
     }
+    if(action.type === 'CREATE_TASK'){
+        state = [...state, action.task];
+    }
     console.log(action.users);
     return state;
 }

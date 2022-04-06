@@ -8,6 +8,7 @@ const Nav = ({users, tasks, usersWithoutTasks})=> {
         <nav>
             <Link to='/'>Home</Link>
             <Link to='/tasks'>Tasks ({tasks.length})</Link>
+            <Link to='/tasks/create'>Create A Task</Link>
             <Link to='/users'>Users({users.length})</Link>
             <Link to='/users/without-tasks'>Users Without Tasks ({ usersWithoutTasks.length})</Link>
 
